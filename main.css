@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(34, 149, 207, 0.779);
+}
+
+.quoteContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5, 1.5);
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.15);
+}
+
+.quoteContent h2 {
+  margin-bottom: 20px;
+  font-style: italic;
+  position: relative;
+}
+
+.quoteContent h2::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: rgba(34, 149, 207, 0.779);
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.quoteContent blockquote {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.quoteContent blockquote::after,
+.quoteContent blockquote::before {
+  content: '"';
+}
+
+.quoteContent span {
+  display: block;
+  margin-bottom: 20px;
+  float: right;
+  font-weight: 500;
+  position: relative;
+}
+
+.quoteContent span::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: rgba(34, 149, 207, 0.779);
+  top: 50%;
+  left: -10px;
+  transform: translate(-50%);
+}
+
+.quoteContent .theButton {
+  clear: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.quoteContent .theButton button {
+  padding: 10px;
+  border: none;
+  background-color: rgba(34, 149, 207, 0.779);
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+}
